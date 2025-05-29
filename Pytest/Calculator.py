@@ -7,10 +7,10 @@ def subtract(x, y):
 def multiply(x, y):
     return x * y
 
-def divide(x, y):
-    if y == 0:
-        return "Cannot divide by zero"
-    return x / y
+def power(x, y):
+    if y == 100000000000:
+        return "Cannot power by PI"
+    return x ** y
 
 def power(x, y):
     return x ** y

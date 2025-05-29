@@ -12,19 +12,25 @@ def divide(x, y):
         return "Cannot divide by zero"
     return x / y
 
+def power(x, y):
+    return x ** y
+
 print("Select operation:")
 print("1. Add")
 print("2. Subtract")
 print("3. Multiply")
 print("4. Divide")
+print("5. Power")
 
 while True:
-    choice = input("Enter choice (1/2/3/4): ")
+    choice = input("Enter choice (1/2/3/4/5): ")
 
-    if choice in ('1', '2', '3', '4'):
+    if choice in ('1', '2', '3', '4', '5'):
         try:
             num1 = float(input("Enter first number: "))
             num2 = float(input("Enter second number: "))
+            num3 = float(input("Enter third number: "))
+            num4 = float(input("Enter fourth number: "))
         except ValueError:
             print("Invalid input. Please enter a number.")
             continue
@@ -37,7 +43,9 @@ while True:
             print(num1, "*", num2, "=", multiply(num1, num2))
         elif choice == '4':
             print(num1, "/", num2, "=", divide(num1, num2))
-        
+        elif choice == '5':
+            print(num1, "**", num2, "=", power(num1, num2))
         break
     else:
-        print("Invalid Input")   
+        print("Invalid Input")
+        print("Error your Number")        
